@@ -1,16 +1,36 @@
 <%@ page errorPage="errorPage.jsp" %>
-<html>
-<head>
-    <title>Math Operators</title>
-</head>
-<body>
+    <html>
 
-<%
+    <head>
+        <title>Math Operators</title>
+        <style>
+            .content {
+                text-align: center;
+                border: 4px dotted gray;
+            }
+            
+            a {
+                text-decoration: dashed;
+                font-weight: bold;
+                display: block;
+                margin-top: 20px;
+            }
+            
+            h1 {
+                font-size: 30px;
+                font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="content">
+            <%
     String p1=new String(request.getParameter("p1"));
     String p2=new String(request.getParameter("p2"));
     String op=new String(request.getParameter("op"));
 %>
-<%!
+                <%!
     public boolean isParsable(String p) {
         try {
             Integer.parseInt(p);
@@ -85,23 +105,23 @@
 
 
 %>
-<%
+                    <%
     switch(op){
         case "add":
-            out.println("<h2>Addition</h2>");
+            out.println("<h1>Addition</h1>");
             out.println(add(p1, p2));
 
             break;
         case "sub":
-            out.println("<h2>Subtraction</h2>");
+            out.println("<h1>Subtraction</h1>");
             out.println(subs(p1,p2));
             break;
         case "mul":
-            out.println("<h2>Multiplication</h2>");
+            out.println("<h1>Multiplication</h1>");
             out.println(mult(p1,p2));
             break;
         case "div":
-            out.println("<h2>Divition</h2>");
+            out.println("<h1>Division</h1>");
                 out.println(divs(p1,p2));
             break;
         default:
@@ -111,8 +131,9 @@ throw new NullPointerException("Please insert valid operation code (add, sub, di
 
 %>
 
-     <a href="report.jsp">Detailed error</a>
+                        <a href="report.jsp">Detailed Information</a>
+        </div>
 
+    </body>
 
-</body>
-</html>
+    </html>

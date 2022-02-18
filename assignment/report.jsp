@@ -1,10 +1,14 @@
 
-<% String userAgent=request.getHeader("user-agent"); %>
+<% String userAgent=request.getHeader("user-agent");
+    String accept=request.getHeader("accept");
+    String accLang=request.getHeader("accept-language");
+
+     %>
 
     <html>
 
     <head>
-        <title>report Page</title>
+        <title>Report Page</title>
     </head>
 
     <style>
@@ -36,6 +40,9 @@
     <body>
         <h2>Your Information:</h2>
         <p class="error"><%=userAgent%></p>
+          <p class="error"><%=accept%></p>
+          <p class="error"><%=accLang%></p>
+
     
   
     </body>
