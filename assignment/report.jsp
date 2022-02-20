@@ -1,7 +1,10 @@
 
-<% String userAgent=request.getHeader("user-agent");
-    String accept=request.getHeader("accept");
-    String accLang=request.getHeader("accept-language");
+<% 
+// This Page creates client information of the user.
+
+String userAgent=request.getHeader("user-agent");  //The browser Client using
+    String accept=request.getHeader("accept"); //the document client using
+    String accLang=request.getHeader("accept-language"); // the language client using
 
      %>
 

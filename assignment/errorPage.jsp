@@ -1,3 +1,8 @@
+<%-- 
+    This page retuns the exception if problem occurs in math.jsp
+    
+     --%>
+
 <%@ page isErrorPage="true"%>
 
     <html>
@@ -11,10 +16,11 @@
             display: flex;
             justify-content: center;
             color: white;
-            padding: 20px;
+            padding: 10px;
             border: 1px solid rgba(53, 10, 10, 0.555);
             background-color: red;
             border-radius: 20px;
+            text-decoration: none;
         }
         
         .error:hover {
@@ -32,7 +38,7 @@
 
     <body>
         <h2>Your Error:</h2>
-        <p class="error">${pageContext.exception}</p>
+        <a href="index.html" class="error">${pageContext.exception}</a>
     </body>
 
     </html>

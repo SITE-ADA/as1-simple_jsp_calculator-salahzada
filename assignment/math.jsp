@@ -1,3 +1,14 @@
+<%-- 
+In this page User will see own calculation.
+
+All calculation done in each functions.
+
+Manual Exceptions:
+1) ZeroDivision error handled as ArithmeticException.
+2) Valid operation code handled as NullPointerException.
+
+ --%>
+ 
 <%@ page errorPage="errorPage.jsp" %>
     <html>
 
@@ -9,14 +20,13 @@
                 border: 4px dotted gray;
             }
             
-            a {
-                text-decoration: dashed;
+            .report {
                 font-weight: bold;
                 display: block;
                 margin-top: 20px;
             }
             
-            h1 {
+            .header {
                 font-size: 30px;
                 font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif
             }
@@ -108,20 +118,20 @@
                     <%
     switch(op){
         case "add":
-            out.println("<h1>Addition</h1>");
+            out.println("<h1 class=\"header\">Addition</h1>");
             out.println(add(p1, p2));
 
             break;
         case "sub":
-            out.println("<h1>Subtraction</h1>");
+            out.println("<h1 class=\"header\">Subtraction</h1>");
             out.println(subs(p1,p2));
             break;
         case "mul":
-            out.println("<h1>Multiplication</h1>");
+            out.println("<h1 class=\"header\">Multiplication</h1>");
             out.println(mult(p1,p2));
             break;
         case "div":
-            out.println("<h1>Division</h1>");
+            out.println("<h1 class=\"header\">Division</h1>");
                 out.println(divs(p1,p2));
             break;
         default:
@@ -131,7 +141,7 @@ throw new NullPointerException("Please insert valid operation code (add, sub, di
 
 %>
 
-                        <a href="report.jsp">Detailed Information</a>
+                        <a class="report" href="report.jsp">Detailed Information</a>
         </div>
 
     </body>

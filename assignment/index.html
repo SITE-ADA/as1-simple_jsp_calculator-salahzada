@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border: 2px dashed black;
+            padding: 20px 0px;
+        }
+        
+        label {
+            margin-bottom: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+        }
+        
+        label input {
+            border: 1px solid rgba(0, 0, 0, 0.233);
+            border-radius: 30px;
+            font-size: 15px;
+            width: 250px;
+        }
+        
+        label~input {
+            border-radius: 10px;
+            width: 100px;
+            padding: 6px;
+            background-color: rgb(150, 150, 150);
+            color: white;
+            font-style: italic;
+        }
+        
+        label~input:hover {
+            cursor: pointer;
+            opacity: 0.8;
+            transition: 0.7s;
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="math.jsp" method="get">
+
+        <label for="p1">Please enter first parameter:
+        <input type="text" name="p1">
+    </label>
+        <label for="p2">Please enter second parameter:
+        <input type="text" name="p2">
+    </label>
+        <label for="op">Please enter operation name. Example: 
+            <ul>
+                <li>For addition: <i><b>add</b></i></li>
+                <li>For subtraction: <i><b>sub</b></i></li>
+                <li>For multiplication: <i><b>mul</b></i> </li>
+                <li>For division: <i><b>div</b></i> </li>
+            </ul>
+            <input type="text" name="op">
+        </label>
+
+
+        <input type="submit" value="Calculate">
+    </form>
+</body>
+
+</html>
